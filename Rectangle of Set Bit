@@ -1,0 +1,44 @@
+#include<iostream>
+using namespace std;
+int main()
+ {
+ int t,sum,big,s,e,r1,c;
+ sum=big=0;
+ int a[3][100];
+ cin>>t;
+ while(t--)
+ {
+ int n,m;
+ cin>>n>>m;
+ for(int i=0;i<3;i++)
+ {for(int j=0;j<n;j++)
+  {a[i][j]=0;}
+  }
+  for(int i=1;i<=m;i++)
+  {int r,c1,c2;
+  cin>>r>>c1>>c2;
+  for(int j=c1-1;j<c2;j++)
+  {a[r-1][j]=1;}
+ 
+}
+int count=0;
+big=0;   
+for(s=0;s<n;s++)
+{sum=0;
+for(e=0;e<3;e++)
+{sum=sum+a[e][s];}
+if(sum>=big)
+{big=sum;}
+}int p=0;
+for(s=0;s<n;s++)
+{sum=0;
+for(e=0;e<3;e++)
+{sum=sum+a[e][s];}
+if(sum==big)
+{count++;}
+}
+int area;
+area=count*big;
+ cout<<area<<endl;}
+ return 0; }
+  
